@@ -1,6 +1,6 @@
 // --------------------
 // Definition of variables
-$primary: #32c3ff;
+$primary: rgb(117, 32, 17);
 
 // ----------------------------------------
 // To install Boostrap:
@@ -69,24 +69,23 @@ body {
   .App-intro {
     font-size: large;
   }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
 }
 
 // --------------------
 // Style for Home component
 .Home {
   p {
-    font-size: 1.2em;
+    font-size: 6em;
+    color: white;
   }
+  h2 {
+    margin: 0;
+    font-size: 12em;
+    color: white;
+  }
+  height: 100vh;
+  background-image: url('./images/photo-1553343683-11b5a0562354.jpg');
+  background-size: cover;
 }
 
 // --------------------

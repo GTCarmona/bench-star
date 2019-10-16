@@ -11,7 +11,7 @@ import Signup from './pages/Signup'
 export default function App() {
   return (
     <div className="App">
-      <MainNavbar />
+      {/* <MainNavbar /> */}
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/countries" component={Countries} />
