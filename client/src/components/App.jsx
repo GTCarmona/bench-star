@@ -1,12 +1,12 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import MainNavbar from './MainNavbar'
-import Home from './pages/Home'
-import Countries from './pages/Countries'
-import AddCountry from './pages/AddCountry'
-import Secret from './pages/Secret'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
+import React from "react"
+import { Route, Switch } from "react-router-dom"
+// import MainNavbar from './MainNavbar'
+import Home from "./pages/Home"
+import Countries from "./pages/Countries"
+import AddCountry from "./pages/AddCountry"
+import Secret from "./pages/Secret"
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
 
 export default function App() {
   return (
