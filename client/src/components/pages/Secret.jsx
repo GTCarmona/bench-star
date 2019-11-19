@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import api from '../../api'
+import React, { useState, useEffect } from "react"
+import api from "../../services-api"
 
 export default function Secret() {
   const [state, setState] = useState({ secret: null, message: null })
 
   useEffect(() => {
-    console.log('Boom!')
+    console.log("Boom!")
     api
       .getSecret()
       .then(data => setState({ secret: data.secret }))

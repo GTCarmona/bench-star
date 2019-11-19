@@ -1,12 +1,35 @@
-import React, { useState } from "react"
+import React, { useState, Component } from "react"
 import api from "../../services-api"
-
-export default function AddCountry(props) {
+// {
+//   title: { type: String, required: true, trim: true },
+//   description: String,
+//   location: { lat: String, lon: String },
+//   imageUrl: String,
+//   _createdBy: { type: ObjectId, ref: "User" },
+//   _visited: [{ type: ObjectId, ref: "User" }],
+//   reviews: [
+//     {
+//       rating: {
+//         type: Number,
+//         min: 1,
+//         max: 5,
+//       },
+//       _reviewBy: { type: ObjectId, ref: "User" },
+//     },
+//   ],
+//   tags: {
+//     type: [String],
+//     enum: ["Comfy", "View", "Weird", "Sunset", "Boring", "Nature"],
+//   },
+export default class AddBench extends React.Component {
   const [state, setState] = useState({
-    name: "",
-    capitals: "",
-    area: "",
+    title: "",
     description: "",
+    location: "",
+    imageUrl: "",
+    _createdBy: "",
+    _visited: "",
+    reviews: "",
   })
   const [message, setMessage] = useState(null)
 
@@ -23,15 +46,18 @@ export default function AddCountry(props) {
     e.preventDefault()
     console.log(state.name, state.description)
     let data = {
-      name: state.name,
-      capitals: state.capitals,
-      area: state.area,
+      title: state.title,
       description: state.description,
+      location: state.location,
+      imageUrl: state.imageUrl,
+      _createdBy: state._createdBy,
+      _visited: state._visited,
+      reviews: state.reviews,
     }
     api
       .addCountry(data)
       .then(result => {
-        console.log("SUCCESS!")
+        console.log("Bench created!")
         setState({
           name: "",
           capitals: "",

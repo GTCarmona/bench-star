@@ -23,76 +23,56 @@ body {
   font-family: sans-serif;
 }
 
-.info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
-  color: white;
-}
-
-.info.info-danger {
-  background-color: #e73f3f;
-}
-
 // --------------------
 // Style for App component
 .App {
   text-align: center;
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-
-  .App-header {
-    background-color: $primary;
-    padding: 20px;
-    color: white;
-
-    a {
-      color: white;
-      padding: 0 5px;
-      text-decoration: unset;
-    }
-
-    a.active {
-      font-weight: bold;
-    }
-  }
-
-  .App-title {
-    font-size: 1.5em;
-  }
-
-  .App-intro {
-    font-size: large;
-  }
+  background-color: yellow;
+  height: 100vh;
+  // background-image: url("./images/photo-1553343683-11b5a0562354.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 // --------------------
 // Style for Home component
 .Home {
-  p {
-    font-size: 6em;
-    color: white;
-  }
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   h2 {
     margin: 0;
-    font-size: 12em;
-    color: white;
+    font-size: 4em;
+    color: black;
   }
-  height: 100vh;
-  background-image: url('./images/photo-1553343683-11b5a0562354.jpg');
-  background-size: cover;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: blueviolet;
+      padding: 0.8em;
+      border-radius: 6px;
+    }
+  }
+  // p {
+  //   font-size: 6em;
+  //   color: black;
+  // }
+  // background-image: url("./images/photo-1553343683-11b5a0562354.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // min-height: 20vh;
 }
 
-// --------------------
-// Style for Secret component
-.Secret {
-  .result {
-    font-size: 1.2em;
-    color: $primary;
+.Signup {
+  h2 {
+    margin: 0;
   }
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import api from '../../api'
+import React, { useEffect, useState } from "react"
+import api from "../../services-api"
 
 export default function Countries() {
   const [countries, setCountries] = useState([])

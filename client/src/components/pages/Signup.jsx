@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import api from '../../api'
+import React, { useState } from "react"
+import api from "../../services-api"
 
 export default function Signup(props) {
   const [state, setState] = useState({
-    username: '',
-    name: '',
-    password: '',
+    email: "",
+    username: "",
+    password: "",
     message: null,
   })
 
@@ -19,15 +19,15 @@ export default function Signup(props) {
   function handleClick(e) {
     e.preventDefault()
     let data = {
+      email: state.email,
       username: state.username,
-      name: state.name,
       password: state.password,
     }
     api
       .signup(data)
       .then(result => {
-        console.log('SUCCESS!')
-        props.history.push('/') // Redirect to the home page
+        console.log("SUCCESS!")
+        props.history.push("/") // Redirect to the home page
       })
       .catch(err => setState({ message: err.toString() }))
   }
@@ -35,29 +35,29 @@ export default function Signup(props) {
     <div className="Signup">
       <h2>Signup</h2>
       <form>
-        Username:{' '}
+        Email:{" "}
+        <input
+          type="text"
+          value={state.email}
+          name="email"
+          onChange={handleInputChange}
+        />{" "}
+        <br />
+        Username:{" "}
         <input
           type="text"
           value={state.username}
           name="username"
           onChange={handleInputChange}
-        />{' '}
+        />{" "}
         <br />
-        Name:{' '}
-        <input
-          type="text"
-          value={state.name}
-          name="name"
-          onChange={handleInputChange}
-        />{' '}
-        <br />
-        Password:{' '}
+        Password:{" "}
         <input
           type="password"
           value={state.password}
           name="password"
           onChange={handleInputChange}
-        />{' '}
+        />{" "}
         <br />
         <button onClick={e => handleClick(e)}>Signup</button>
       </form>
